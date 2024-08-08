@@ -20,3 +20,5 @@ o	Physical implementation of the system passing through ASIC flow phases and gen
 
 o	Verify functionality post-layout considering the actual delays. 
 
+# System Block 
+![image](https://github.com/user-attachments/assets/5f5ae136-f5a9-4fa2-be0c-b08f171959a2)
