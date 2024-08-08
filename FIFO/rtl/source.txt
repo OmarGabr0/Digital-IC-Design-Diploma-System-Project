@@ -1,0 +1,6 @@
+bit_synch.v
+fifo_memory.v
+fifo_rd.v
+fifo_tb.v
+fifo_top.v
+fifo_wr.v
