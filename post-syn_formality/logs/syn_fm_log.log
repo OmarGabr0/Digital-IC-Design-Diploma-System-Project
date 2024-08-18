@@ -1,0 +1,409 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Mon Aug 19 01:56:36 2024
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+############################  Search PATH ################################
+lappend search_path /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+lappend search_path /home/IC/Projects/System/RTL/ALU
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU
+lappend search_path /home/IC/Projects/System/RTL/ASYNC_FIFO
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO
+lappend search_path /home/IC/Projects/System/RTL/CLKDIV_MUX
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX
+lappend search_path /home/IC/Projects/System/RTL/Clock_Divider
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider
+lappend search_path /home/IC/Projects/System/RTL/Clock_Gating
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating
+lappend search_path /home/IC/Projects/System/RTL/DATA_SYNC
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC
+lappend search_path /home/IC/Projects/System/RTL/RegFile
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC /home/IC/Projects/System/RTL/RegFile
+lappend search_path /home/IC/Projects/System/RTL/PULSE_GEN
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC /home/IC/Projects/System/RTL/RegFile /home/IC/Projects/System/RTL/PULSE_GEN
+lappend search_path /home/IC/Projects/System/RTL/RST_SYNC
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC /home/IC/Projects/System/RTL/RegFile /home/IC/Projects/System/RTL/PULSE_GEN /home/IC/Projects/System/RTL/RST_SYNC
+lappend search_path /home/IC/Projects/System/RTL/SYS_CTRL
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC /home/IC/Projects/System/RTL/RegFile /home/IC/Projects/System/RTL/PULSE_GEN /home/IC/Projects/System/RTL/RST_SYNC /home/IC/Projects/System/RTL/SYS_CTRL
+lappend search_path /home/IC/Projects/System/RTL/UART/UART_RX
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC /home/IC/Projects/System/RTL/RegFile /home/IC/Projects/System/RTL/PULSE_GEN /home/IC/Projects/System/RTL/RST_SYNC /home/IC/Projects/System/RTL/SYS_CTRL /home/IC/Projects/System/RTL/UART/UART_RX
+lappend search_path /home/IC/Projects/System/RTL/UART/UART_TX
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC /home/IC/Projects/System/RTL/RegFile /home/IC/Projects/System/RTL/PULSE_GEN /home/IC/Projects/System/RTL/RST_SYNC /home/IC/Projects/System/RTL/SYS_CTRL /home/IC/Projects/System/RTL/UART/UART_RX /home/IC/Projects/System/RTL/UART/UART_TX
+lappend search_path /home/IC/Projects/System/RTL/UART/UART_TOP
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC /home/IC/Projects/System/RTL/RegFile /home/IC/Projects/System/RTL/PULSE_GEN /home/IC/Projects/System/RTL/RST_SYNC /home/IC/Projects/System/RTL/SYS_CTRL /home/IC/Projects/System/RTL/UART/UART_RX /home/IC/Projects/System/RTL/UART/UART_TX /home/IC/Projects/System/RTL/UART/UART_TOP
+lappend search_path /home/IC/Projects/System/RTL/Top
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/Projects/System/RTL/ALU /home/IC/Projects/System/RTL/ASYNC_FIFO /home/IC/Projects/System/RTL/CLKDIV_MUX /home/IC/Projects/System/RTL/Clock_Divider /home/IC/Projects/System/RTL/Clock_Gating /home/IC/Projects/System/RTL/DATA_SYNC /home/IC/Projects/System/RTL/RegFile /home/IC/Projects/System/RTL/PULSE_GEN /home/IC/Projects/System/RTL/RST_SYNC /home/IC/Projects/System/RTL/SYS_CTRL /home/IC/Projects/System/RTL/UART/UART_RX /home/IC/Projects/System/RTL/UART/UART_TX /home/IC/Projects/System/RTL/UART/UART_TOP /home/IC/Projects/System/RTL/Top
+########################### Define Top Module ############################
+set top_module SYS_TOP
+SYS_TOP
+######################### Formality Setup File ###########################
+set synopsys_auto_setup true
+true
+set_svf "../../Synthesis/$top_module.svf"
+SVF set to '../../Synthesis/SYS_TOP.svf'.
+1
+####################### Read Reference tech libs ########################
+set SSLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+read_db -container Ref [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Created container 'Ref'
+Current container set to 'Ref'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+###################  Read Reference Design Files ######################## 
+read_verilog -container Ref "ALU.v"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/Projects/System/RTL/ALU/ALU.v'
+1
+read_verilog -container Ref "ClkDiv.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/Clock_Divider/ClkDiv.v'
+1
+read_verilog -container Ref "CLKDIV_MUX.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/CLKDIV_MUX/CLKDIV_MUX.v'
+1
+read_verilog -container Ref "DATA_SYNC.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/DATA_SYNC/DATA_SYNC.v'
+1
+read_verilog -container Ref "BIT_SYNC.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/DATA_SYNC/BIT_SYNC.v'
+1
+read_verilog -container Ref "fifo_memory.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/ASYNC_FIFO/fifo_memory.v'
+1
+read_verilog -container Ref "fifo_rd.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/ASYNC_FIFO/fifo_rd.v'
+1
+read_verilog -container Ref "fifo_top.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/ASYNC_FIFO/fifo_top.v'
+1
+read_verilog -container Ref "fifo_wr.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/ASYNC_FIFO/fifo_wr.v'
+1
+read_verilog -container Ref "PULSE_GEN.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/PULSE_GEN/PULSE_GEN.v'
+1
+read_verilog -container Ref "reg_file.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/RegFile/reg_file.v'
+1
+read_verilog -container Ref "RST_SYNC.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/RST_SYNC/RST_SYNC.v'
+1
+read_verilog -container Ref "RX_data_sampling.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_RX/RX_data_sampling.v'
+1
+read_verilog -container Ref "RX_deserializer.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_RX/RX_deserializer.v'
+1
+read_verilog -container Ref "RX_edge_bit_counter.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_RX/RX_edge_bit_counter.v'
+1
+read_verilog -container Ref "RX_FSM.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_RX/RX_FSM.v'
+1
+read_verilog -container Ref "RX_paity_check.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_RX/RX_paity_check.v'
+1
+read_verilog -container Ref "RX_stp_chk_block.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_RX/RX_stp_chk_block.v'
+1
+read_verilog -container Ref "RX_str_chk._block.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_RX/RX_str_chk._block.v'
+1
+read_verilog -container Ref "RX_TOP.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_RX/RX_TOP.v'
+1
+read_verilog -container Ref "SYS_CTRL.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/SYS_CTRL/SYS_CTRL.v'
+1
+read_verilog -container Ref "SYS_TOP.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/Top/SYS_TOP.v'
+1
+read_verilog -container Ref "TX_FSM.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_TX/TX_FSM.v'
+1
+read_verilog -container Ref "TX_MUX.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_TX/TX_MUX.v'
+1
+read_verilog -container Ref "TX_parity_calc.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_TX/TX_parity_calc.v'
+1
+read_verilog -container Ref "TX_serializer.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_TX/TX_serializer.v'
+1
+read_verilog -container Ref "TX_TOP.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_TX/TX_TOP.v'
+1
+read_verilog -container Ref "UART.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/UART/UART_TOP/UART.v'
+1
+read_verilog -container Ref "CLK_GATE.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/RTL/Clock_Gating/CLK_GATE.v'
+1
+######################## set the top Reference Design ######################## 
+set_reference_design SYS_TOP
+Reference design set to 'Ref:/WORK/SYS_TOP'
+1
+set_top SYS_TOP
+Setting top design to 'Ref:/WORK/SYS_TOP'
+Status:   Elaborating design SYS_TOP   ...  
+Status:   Elaborating design RST_SYNC  stages=2 ...  
+Information: Created design named 'RST_SYNC_stages2'. (FE-LINK-13)
+Status:   Elaborating design DATA_SYNC  BUS_WIDTH=8, NUM_STAGES=2 ...  
+Information: Created design named 'DATA_SYNC_BUS_WIDTH8_NUM_STAGES2'. (FE-LINK-13)
+Status:   Elaborating design fifo_top  data_width=8, FIFO_DEPTH=8, pointer_width=4 ...  
+Information: Created design named 'fifo_top_data_width8_FIFO_DEPTH8_pointer_width4'. (FE-LINK-13)
+Status:   Elaborating design fifo_wr  pointer_width=4 ...  
+Information: Created design named 'fifo_wr_pointer_width4'. (FE-LINK-13)
+Status:   Elaborating design fifo_rd  pointer_width=4 ...  
+Information: Created design named 'fifo_rd_pointer_width4'. (FE-LINK-13)
+Status:   Elaborating design fifo_mem  DATA=8, DEPTH=8, pointer_width=4 ...  
+Information: Created design named 'fifo_mem_DATA8_DEPTH8_pointer_width4'. (FE-LINK-13)
+Status:   Elaborating design BIT_SYNC  NUM_STAGES=2, BUS_WIDTH=4 ...  
+Information: Created design named 'BIT_SYNC_NUM_STAGES2_BUS_WIDTH4'. (FE-LINK-13)
+Status:   Elaborating design PULSE_GEN   ...  
+Status:   Elaborating design ClkDiv  RATIO_WD=8 ...  
+Information: Created design named 'ClkDiv_RATIO_WD8'. (FE-LINK-13)
+Status:   Elaborating design CLKDIV_MUX   ...  
+Status:   Elaborating design ClkDiv   ...  
+Status:   Elaborating design UART   ...  
+Status:   Elaborating design UART_RX  DATAWIDTH=8 ...  
+Information: Created design named 'UART_RX_DATAWIDTH8'. (FE-LINK-13)
+Status:   Elaborating design RX_FSM   ...  
+Status:   Elaborating design RX_parity_check  data_width=8 ...  
+Information: Created design named 'RX_parity_check_data_width8'. (FE-LINK-13)
+Status:   Elaborating design RX_str_check   ...  
+Status:   Elaborating design RX_stp_chk   ...  
+Status:   Elaborating design RX_deserializer  data_width=8 ...  
+Information: Created design named 'RX_deserializer_data_width8'. (FE-LINK-13)
+Status:   Elaborating design RX_edge_bit_cnt   ...  
+Status:   Elaborating design RX_data_sampling   ...  
+Status:   Elaborating design UART_TX  DATAWIDTH=8 ...  
+Information: Created design named 'UART_TX_DATAWIDTH8'. (FE-LINK-13)
+Status:   Elaborating design TX_serializer  datawidth=8 ...  
+Information: Created design named 'TX_serializer_datawidth8'. (FE-LINK-13)
+Status:   Elaborating design TX_parity  datawidth=8 ...  
+Information: Created design named 'TX_parity_datawidth8'. (FE-LINK-13)
+Status:   Elaborating design TX_mux   ...  
+Status:   Elaborating design TX_fsm  datawidth=8 ...  
+Information: Created design named 'TX_fsm_datawidth8'. (FE-LINK-13)
+Status:   Elaborating design sys_ctrl   ...  
+Status:   Elaborating design REG_FILE   ...  
+Status:   Elaborating design ALU   ...  
+Status:   Elaborating design CLK_GATE   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Ref:/WORK/SYS_TOP'
+Reference design set to 'Ref:/WORK/SYS_TOP'
+1
+####################### Read Implementation tech libs ######################## 
+read_db -container Imp [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Created container 'Imp'
+Current container set to 'Imp'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+#################### Read Implementation Design Files ######################## 
+read_verilog -container Imp -netlist "/home/IC/Projects/System/Backend/Synthesis/netlists/SYS_TOP.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Projects/System/Backend/Synthesis/netlists/SYS_TOP.v'
+1
+####################  set the top Implementation Design ######################
+set_implementation_design SYS_TOP
+Implementation design set to 'Imp:/WORK/SYS_TOP'
+1
+set_top SYS_TOP
+Setting top design to 'Imp:/WORK/SYS_TOP'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/SYS_TOP'
+Implementation design set to 'Imp:/WORK/SYS_TOP'
+1
+## matching Compare points
+match
+Reference design is 'Ref:/WORK/SYS_TOP'
+Implementation design is 'Imp:/WORK/SYS_TOP'
+Status:  Checking designs...
+    Warning: 0 (12) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          2          0          0          0          2
+instance_map        :         28          0          0          0         28
+mark                :         22          0          0          0         22
+multiplier          :          2          0          0          0          2
+transformation
+   map              :         15          0          0          0         15
+   share            :          2          0          0          0          2
+uniquify            :          2          2          0          0          4
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      ../../Synthesis/SYS_TOP.svf
+
+SVF files produced:
+  /home/IC/Projects/System/Backend/Formality/post-syn/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 348 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 4 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+## verify
+set successful [verify]
+Reference design is 'Ref:/WORK/SYS_TOP'
+Implementation design is 'Imp:/WORK/SYS_TOP'
+    
+*********************************** Matching Results ***********************************    
+ 348 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 4 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/SYS_TOP
+ Implementation design: Imp:/WORK/SYS_TOP
+ 348 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       4     344       0     348
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Constant reg                                                         0       1       1
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+report_passing_points > "reports/passing_points.rpt"
+report_failing_points > "reports/failing_points.rpt"
+report_aborted_points > "reports/aborted_points.rpt"
+report_unverified_points > "reports/unverified_points.rpt"
+start_gui
+     1  source -echo -verbose syn_fm_script.tcl
+1
+1
+fm_shell (verify)> exitr
+Error: unknown command 'exitr' (CMD-005)
+fm_shell (verify)> exit
+
+Maximum memory usage for this session: 465464 KB
+CPU usage for this session: 3.99 seconds
+Current time: Mon Aug 19 01:56:50 2024
+Elapsed time: 25 seconds
+
+Thank you for using Formality (R)!
